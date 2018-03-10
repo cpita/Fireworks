@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks!</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            overflow: hidden;
+        }
+        canvas{
+            position: absolute;
+        }
+        #barra{
+            height:50px;
+            width:100%;
+            position: absolute;
+        }
+        #navbar{
+            padding-top: 15px;
+        }
+        a{
+            float:left;
+            margin-left:50px;
+        }
+        a:hover{
+            cursor:pointer;
+            color:white;
+        }
+        img{
+            position: absolute;
+            float:right;
+            right:40px;
+            top:10px;
+            cursor:pointer;
+        }
+        select{
+            margin-left:1200px;
+        }
+        #delete{
+            right:200px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <canvas id="canvas"></canvas>
+    <div id="barra">
+        <p id="navbar">
+            <a onclick="mode='SPECTACLE';updateGUI();" id="SPECTACLE">Espect&aacute;culo</a>
+            <a onclick="mode='CONTINUOUS_SPECTACLE';updateGUI();" id="CONTINUOUS_SPECTACLE">Continuo</a>
+            <a onclick="mode='PARTICLE';updateGUI();" id="PARTICLE">Part&iacute;culas</a>
+            <a onclick="mode='MANUAL';updateGUI();" id="MANUAL">Manual</a>
+        </p>
+        <select id="select">
+            <option>Aleatorio</option>
+        </select>
+        <img src="img/bin2.png" id="delete">
+        <img src="img/pause2.png" id="pause">
+        <img src="img/play3.png" id="play">
+        <img src="img/radio-unchecked.png" id="start">
+        <img src="img/stop2.png" id="stop">
+    </div>
+
+<script src="js/constants.js"></script>
+<script src="js/FireworkBasic.js"></script>
+<script src="js/BigFirework.js"></script>
+<script src="js/Palmera.js"></script>
+<script src="js/Tochamen.js"></script>
+<script src="js/Nebula.js"></script>
+<script src="js/main.js"></script>
+<script src="js/GUI.js"></script>
+<script src="js/Event.js"></script>
+</body>
+</html>
